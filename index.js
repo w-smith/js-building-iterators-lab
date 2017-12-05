@@ -10,24 +10,27 @@ var myReduce = require('./myReduce');
 var numArray = [0,1,10,100,1000];
 
 
-/* myEach */
+function myEach(arr, callback) {
+  
+for (var i=0; i< arr.length; i++) {
+callback(arr[i], i, arr);
+	
+  }
+}
 
-//
-/*myEach(numArray, function print(element, index, arr) {
-   console.log('inside myEach', element, index, arr);
- });*/
 
 
 
+function myMap(arr, callback) {
 
-/* myMap */
 
-/*var input = ["a","b","c"];
-var output = myMap(input, function capitalize(v){
-    return v.toUpperCase();
-});
-console.log('Testing myMap');
-console.log(output);
-console.log(output[0] === "A" && output[1] === "B" && output[2] === "C"); // assertion
+let newArray = [];
+for (var i=0; i< arr.length; i++) {
+newArray.push(callback(arr[i], i, arr));
+}
 
-console.log("the end");*/
+return newArray;
+
+
+}
+
