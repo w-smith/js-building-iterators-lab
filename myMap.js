@@ -11,7 +11,6 @@ newArray.push(callback(arr[i], i, arr));
 return newArray;
 
 
-
 }
 
 /*
